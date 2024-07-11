@@ -22,10 +22,10 @@ import FooterPage from '@/components/FooterPage.vue'
 
   <div>
     <HeaderPage class="header" />
+    <RouterView class="content" />
     <FooterPage class="footer" />
   </div>
 
-  <!-- <RouterView /> -->
 </template>
 
 <style scoped>
@@ -40,6 +40,12 @@ div {
 .footer {
   position: fixed;
   bottom: 0; left: 0;
+}
+.content {
+  position: fixed;
+  top: 50px; left: 0;
+  margin: 0; padding: 0;
+  box-sizing: border-box;
 }
 
 /* header {
