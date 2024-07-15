@@ -1,10 +1,10 @@
 <template>
     <div class="wrap">
         <div class="btn_group">
-            <a href="#">홈</a>
-            <a href="#">카테고리</a>
-            <a href="#">좋아요</a>
-            <a href="#">마이페이지</a>
+            <img src="@/assets/home.png">
+            <img src="@/assets/menu.png">
+            <img src="@/assets/like.png">
+            <img src="@/assets/mypage.png">
         </div>
     </div>
 </template>
@@ -19,14 +19,17 @@
 }
 .wrap {
     width: 100%; height: 50px;
-    border: 1px solid red;
+    background-color: #fff;
+    border: 1px solid #ccc;
 }
 .btn_group {
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    width: inherit; height: inherit;
 }
-.btn_group > a {
-    line-height: 50px;
-    border: 1px solid orange;
+.btn_group > img {
+    width: 35px; height: 35px;
+    /* border: 1px solid orange; */
 }
 </style>

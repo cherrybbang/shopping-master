@@ -1,5 +1,5 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView, useRoute } from 'vue-router'
 // import HelloWorld from './components/HelloWorld.vue'
 import HeaderPage from '@/components/HeaderPage.vue'
 import FooterPage from '@/components/FooterPage.vue'
@@ -21,7 +21,7 @@ import FooterPage from '@/components/FooterPage.vue'
   </header> -->
 
   <div>
-    <HeaderPage class="header" />
+    <HeaderPage class="header"/>
     <RouterView class="content" />
     <FooterPage class="footer" />
   </div>
@@ -44,7 +44,9 @@ div {
 .content {
   position: fixed;
   top: 50px; left: 0;
-  margin: 0; padding: 0;
+  margin-bottom: 50px;
+  /* margin: 50px 0; */
+  /* box-sizing: border-box; */
   box-sizing: border-box;
 }
 

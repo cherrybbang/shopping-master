@@ -2,16 +2,35 @@
     <div class="wrap">
         <div class="header_group">
             <div class="logo">
-                <a href="#">로고</a>
+                <img src="@/assets/logo.png" style="width: 50px;">
             </div>
 
             <div class="nav">
-                <input type="text" placeholder="검색창">
-                <a href="#">장바구니</a>
+                <img src="@/assets/search.png" style="width: 30px;">
+                <img src="@/assets/cart.png" style="width: 30px;">
             </div>
         </div>
     </div>
 </template>
+
+<script>
+
+export default {
+    data() {
+        return {
+
+        }
+    },
+    mounted() {
+
+    },
+    methods : {
+
+    }
+
+}
+
+</script>
 
 <style scoped>
 * {
@@ -23,26 +42,26 @@
 }
 .wrap {
     width: 100%; height: 50px;
-    border: 1px solid red;
+    background-color: #fff;
+    border: 1px solid #ccc;
 }
 .header_group {
     display: flex;
     justify-content: space-between;
     width: inherit; height: inherit;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
 .logo {
     width: 100px; height: 50px;
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
+    padding-left: 10px;
 }
 .nav {
-    width: 300px;
+    width: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid orange;
-}
-.nav > input {
-    width: 70%; height: 30px;
+    /* border: 1px solid orange; */
+    padding-right: 10px;
 }
 </style>
