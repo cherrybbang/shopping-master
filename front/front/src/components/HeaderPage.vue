@@ -48,13 +48,13 @@ export default {
 .header_group {
     display: flex;
     justify-content: space-between;
-    width: inherit; height: inherit;
+    width: 97%; height: inherit;
+    margin: 0 auto;
     /* border: 1px solid blue; */
 }
 .logo {
     width: 100px; height: 50px;
     /* border: 1px solid orange; */
-    padding-left: 10px;
 }
 .nav {
     width: 100px;
@@ -62,6 +62,5 @@ export default {
     justify-content: space-between;
     align-items: center;
     /* border: 1px solid orange; */
-    padding-right: 10px;
 }
 </style>

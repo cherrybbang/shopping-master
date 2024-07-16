@@ -32,6 +32,9 @@ import FooterPage from '@/components/FooterPage.vue'
 
 div {
   /* position: relative; */
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* flex-wrap: wrap; */
 }
 .header {
   position: fixed;
@@ -42,12 +45,7 @@ div {
   bottom: 0; left: 0;
 }
 .content {
-  position: fixed;
-  top: 50px; left: 0;
-  margin-bottom: 50px;
-  /* margin: 50px 0; */
-  /* box-sizing: border-box; */
-  box-sizing: border-box;
+  margin-top: 50px;
 }
 
 /* header {

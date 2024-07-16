@@ -58,43 +58,48 @@ export default {
 <style scoped>
 .wrap {
     width: 100%; height: 100vh;
-    /* overflow: scroll; */
-    border: 3px solid red;
+    /* border: 3px solid red; */
 }
 .slide_wrap {
+    width: 100%;
     height: 400px;
-    padding: 10px;
+    /* padding: 0 5px; */
     /* border: 2px solid blue; */
 }
 .slide_group {
     display: flex;
     /* justify-content: space-between; */
     /* flex-wrap: wrap; */
-    width: 400px; height: inherit;
+    width: 100%; height: inherit;
     overflow: hidden;
     /* border: 1px solid aqua; */
 }
 .slide_group > img {
-    width: 400px; height: 400px;
+    width: 100%; height: 400px;
     /* border: 1px solid orange; */
 }
 .wrap > p {
-    padding-left: 10px;
+    width: 100%;
+    font-size: 1.1rem;
+    /* padding-left: 10px; */
     font-weight: bold;
     /* border: 1px solid #000; */
 }
 .content_wrap {
-    height: 500px;
-    padding: 10px;
+    width: 100%;
+    height: 700px;
+    /* padding: 10px; */
     /* border: 1px solid blue; */
 }
 .main_content {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    /* border: 1px solid red; */
 }
 .main_content > img {
-    width: 190px; height: 200px;
+    width: 48%; height: 200px;
     margin-top: 10px;
     /* border: 1px solid orange; */
 }
