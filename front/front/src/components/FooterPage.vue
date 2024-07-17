@@ -2,7 +2,7 @@
     <div class="wrap">
         <div class="btn_group">
             <img src="@/assets/home.png">
-            <img src="@/assets/menu.png">
+            <router-link to="/category"><img src="@/assets/menu.png"></router-link>
             <img src="@/assets/like.png">
             <img src="@/assets/mypage.png">
         </div>
@@ -20,6 +20,7 @@
 .wrap {
     width: 100%; height: 50px;
     background-color: #fff;
+    border-radius: 5px;
     border: 1px solid #ccc;
 }
 .btn_group {
@@ -28,8 +29,8 @@
     align-items: center;
     width: inherit; height: inherit;
 }
-.btn_group > img {
-    width: 35px; height: 35px;
+.btn_group img {
+    width: 25px; height: 25px;
     /* border: 1px solid orange; */
 }
 </style>

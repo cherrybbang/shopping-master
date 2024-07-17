@@ -20,33 +20,33 @@ import FooterPage from '@/components/FooterPage.vue'
     </div>
   </header> -->
 
-  <div>
-    <HeaderPage class="header"/>
-    <RouterView class="content" />
+  <!-- <div> -->
+    <!-- <HeaderPage class="header"/> -->
+    <RouterView/>
     <FooterPage class="footer" />
-  </div>
+  <!-- </div> -->
 
 </template>
 
 <style scoped>
-
-div {
-  /* position: relative; */
-  /* display: flex; */
-  /* justify-content: space-between; */
-  /* flex-wrap: wrap; */
-}
-.header {
+/* div {
+  
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+} */
+/* .header {
   position: fixed;
   top: 0; left: 0;
-}
+} */
 .footer {
   position: fixed;
   bottom: 0; left: 0;
 }
-.content {
-  margin-top: 50px;
-}
+/* .content {
+  margin-top: 55px;
+} */
 
 /* header {
   line-height: 1.5;

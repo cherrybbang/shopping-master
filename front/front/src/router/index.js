@@ -10,6 +10,11 @@ const router = createRouter({
       name: 'mainpage',
       component: () => import('@/views/MainPage.vue')
     },
+    {
+      path: '/category',
+      name: 'category',
+      component: () => import('@/views/Category.vue')
+    },
     // {
     //   path: '/home',
     //   name: 'home',
