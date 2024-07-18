@@ -4,9 +4,7 @@
     <main class="category">
         <nav>
             <ul>
-                <li>상의</li>
-                <li>하의</li>
-                <li>치마</li>
+                <li v-for="(c, index) in category" :key="index">{{ c }}</li>
             </ul>
         </nav>
     </main>
@@ -22,7 +20,7 @@ export default {
     },
     data() {
         return {
-
+            category : [],
         }
     },
     mounted() {
@@ -35,10 +33,10 @@ export default {
     methods : {
         categoryList() {
 
-            let categoryData;
-
             const formData = new FormData();
             formData.append('type','parent_category');
+
+            let a = '';
 
             fetch('http://182.213.2.211/api/category_api.php', {
             method : 'POST',
@@ -51,9 +49,11 @@ export default {
 
                 for(let i=0; i<data.msg.length; i++) {
                     // console.log(data.msg[i].category_name);
-                    categoryData = data.msg[i].category_name;
-                    console.log(categoryData);
+                    this.category.push(data.msg[i].category_name);
+                    console.log(this.category);
                 }
+
+                console.log(this.category);
             })
         }
     }
