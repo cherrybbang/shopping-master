@@ -3,8 +3,15 @@
 
     <main class="category">
         <nav>
-            <ul>
-                <li v-for="(c, index) in category" :key="index">{{ c }}</li>
+            <ul class="parent_menu">
+                <li>
+                    <a href="#" v-for="(c, index) in category" :key="index" class="ss" @click="jj()">{{ c }}</a>
+                    <ul class="child_menu">
+                        <li>
+                            <a href="#">aaaaa</a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </main>
@@ -55,6 +62,10 @@ export default {
 
                 console.log(this.category);
             })
+        },
+        jj() {
+            console.log(111);
+
         }
     }
 }
@@ -67,12 +78,24 @@ export default {
     margin-top: 50px;
     /* border: 3px solid red; */
 }
-ul {
+.parent_menu {
     /* border: 1px solid red; */
 }
-ul > li {
-    height: 100px;
-    margin-top: 5px;
+.parent_menu > li {
+    width: inherit;
+    height: 70px;
+    line-height: 70px;
+    /* margin-top: 10px; */
+    /* border: 1px solid #ccc; */
+}
+a {
+    display: block;
+    width: 100%; height: 100%;
+     margin-top: 10px;
     border: 1px solid #ccc;
+}
+.child_menu {
+    /* display: none; */
+    border: 1px solid red;
 }
 </style>
