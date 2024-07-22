@@ -4,13 +4,10 @@
     <main class="category">
         <nav>
             <ul class="parent_menu">
-                <li>
-                    <a href="#" v-for="(c, index) in category" :key="index" class="ss" @click="jj()">{{ c }}</a>
-                    <ul class="child_menu">
-                        <li>
-                            <a href="#">aaaaa</a>
-                        </li>
-                    </ul>
+                <li><a href="#" v-for="(c, index) in category" :key="index" class="ss" @click="jj()">{{ c }}</a>
+                    <!-- <ul class="child_menu">
+                        <li><a href="#"></a></li>
+                    </ul> -->
                 </li>
             </ul>
         </nav>
@@ -79,10 +76,11 @@ export default {
     /* border: 3px solid red; */
 }
 .parent_menu {
-    /* border: 1px solid red; */
+    width: 100%;
+    border: 1px solid red;
 }
 .parent_menu > li {
-    width: inherit;
+    width: 100%;
     height: 70px;
     line-height: 70px;
     /* margin-top: 10px; */
@@ -91,11 +89,11 @@ export default {
 a {
     display: block;
     width: 100%; height: 100%;
-     margin-top: 10px;
+    margin-top: 10px;
     border: 1px solid #ccc;
 }
 .child_menu {
     /* display: none; */
-    border: 1px solid red;
+    border: 1px solid blue;
 }
 </style>

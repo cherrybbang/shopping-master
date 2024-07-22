@@ -4,7 +4,7 @@
             <img src="@/assets/home.png">
             <router-link to="/category"><img src="@/assets/menu.png"></router-link>
             <img src="@/assets/like.png">
-            <img src="@/assets/mypage.png">
+            <router-link to="/login"><img src="@/assets/mypage.png"></router-link>
         </div>
     </div>
 </template>

@@ -15,17 +15,22 @@ const router = createRouter({
       name: 'category',
       component: () => import('@/views/Category.vue')
     },
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import('@/views/LogIn.vue')
+    },
     // {
     //   path: '/home',
     //   name: 'home',
     //   component: HomeView
     // },
     //관리자 페이지
-    {
-      path: '/admin/login',
-      name: 'login',
-      component: () => import('@/components/admin/LogIn.vue')
-    },
+    // {
+    //   path: '/admin/login',
+    //   name: 'login',
+    //   component: () => import('@/components/admin/LogIn.vue')
+    // },
     // 
     // {
     //   path: '/about',
