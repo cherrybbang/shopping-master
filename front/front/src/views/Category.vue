@@ -4,10 +4,13 @@
     <main class="category">
         <nav>
             <ul class="parent_menu">
-                <li><a href="#" v-for="(c, index) in category" :key="index" class="ss" @click="jj()">{{ c }}</a>
-                    <!-- <ul class="child_menu">
-                        <li><a href="#"></a></li>
-                    </ul> -->
+                <li>
+                    <a href="#" v-for="(c, index) in category" :key="index" @click="showMenu(index)">{{ c }}</a>
+                </li>
+            </ul>
+            <ul class="child_menu">
+                <li>
+                    <a href="#" v-for="(c, index) in ccategory" :key="index">{{ c }}</a>
                 </li>
             </ul>
         </nav>
@@ -25,6 +28,8 @@ export default {
     data() {
         return {
             category : [],
+            ccategory : [],
+            index : 0,
         }
     },
     mounted() {
@@ -36,7 +41,6 @@ export default {
     },
     methods : {
         categoryList() {
-
             const formData = new FormData();
             formData.append('type','parent_category');
 
@@ -60,8 +64,98 @@ export default {
                 console.log(this.category);
             })
         },
-        jj() {
-            console.log(111);
+        showMenu(index) {
+            const list = document.querySelector('.child_menu');
+
+            if(index == 0) {
+
+                this.ccategory = [];
+
+                const formData = new FormData();
+                formData.append('type','child_category');
+                formData.append('category_pno','1');
+
+                let a = '';
+
+                fetch('http://182.213.2.211/api/category_api.php', {
+                method : 'POST',
+                body : formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    // console.log(Object.values(data.msg)[0].category_name);
+
+                    for(let i=0; i<data.msg.length; i++) {
+                        // console.log(data.msg[i].category_name);
+                        this.ccategory.push(data.msg[i].category_name);
+                        console.log(this.ccategory);
+                    }
+                })
+
+                list.style.display = 'block';
+
+
+            }
+            if(index == 1) {
+
+                this.ccategory = [];
+
+                const formData = new FormData();
+                formData.append('type','child_category');
+                formData.append('category_pno','2');
+
+                let a = '';
+
+                fetch('http://182.213.2.211/api/category_api.php', {
+                method : 'POST',
+                body : formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    // console.log(Object.values(data.msg)[0].category_name);
+
+                    for(let i=0; i<data.msg.length; i++) {
+                        // console.log(data.msg[i].category_name);
+                        this.ccategory.push(data.msg[i].category_name);
+                        console.log(this.ccategory);
+                    }
+                })
+
+                list.style.display = 'block';
+
+            }
+            if(index == 2) {
+
+                this.ccategory = [];
+
+                const formData = new FormData();
+                formData.append('type','child_category');
+                formData.append('category_pno','3');
+
+                let a = '';
+
+                fetch('http://182.213.2.211/api/category_api.php', {
+                method : 'POST',
+                body : formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    // console.log(Object.values(data.msg)[0].category_name);
+
+                    for(let i=0; i<data.msg.length; i++) {
+                        // console.log(data.msg[i].category_name);
+                        this.ccategory.push(data.msg[i].category_name);
+                        console.log(this.ccategory);
+                    }
+                })
+
+                list.style.display = 'block';
+
+            }
+            
 
         }
     }
@@ -75,25 +169,39 @@ export default {
     margin-top: 50px;
     /* border: 3px solid red; */
 }
+nav {
+    display: flex;
+    width: 100%; height: inherit;
+    padding-top: 10px;
+}
 .parent_menu {
     width: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 .parent_menu > li {
-    width: 100%;
-    height: 70px;
+    /* display: flex; */
+    /* flex-wrap: nowrap; */
+
+    width: 100%; height: 70px;
     line-height: 70px;
-    /* margin-top: 10px; */
-    /* border: 1px solid #ccc; */
+    /* border: 1px solid red; */
 }
 a {
     display: block;
     width: 100%; height: 100%;
     margin-top: 10px;
+    padding-left: 10px;
     border: 1px solid #ccc;
 }
 .child_menu {
-    /* display: none; */
-    border: 1px solid blue;
+    width: 100%;
+    display: none;
+    /* border: 1px solid red; */
+}
+.child_menu > li {
+    width: 100%; height: 70px;
+    line-height: 70px;
+    list-style: none;
+    /* border: 1px solid red; */
 }
 </style>
