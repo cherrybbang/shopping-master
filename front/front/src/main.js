@@ -13,4 +13,5 @@ app.use(router)
 
 app.mount('#app')
 
+// 카카오 연동 로그인
 window.Kakao.init('37843a0003bae1aa68a9596c68858569');
